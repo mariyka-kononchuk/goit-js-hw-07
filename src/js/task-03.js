@@ -20,7 +20,7 @@ const makeGalleryListMarkup = images => {
   return `<li class = "gallery-item"><img src=${url} alt=${alt} class='gallery-img' width=360></li>`;
 };
 
-const listImagesEl = document.querySelector('ul');
+const listImagesEl = document.querySelector('ul#gallery');
 listImagesEl.classList.add('gallery-list');
 
 const makeGallery = images.map(makeGalleryListMarkup).join(''); //объединяем все в одну строку чтоб insertAdjacentHTML мог вставить в HTML
