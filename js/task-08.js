@@ -9,17 +9,10 @@ refs.input.addEventListener('input', onInputNumber);
 refs.createBtn.addEventListener('click', onCreateBoxes);
 refs.clearBtn.addEventListener('click', onClearBoxes);
 
-
-
 function onInputNumber(event) {
-    
    amount = Number(event.currentTarget.value);
-    
-   
-    
 }
 let amount = 0;
-
 
 function onCreateBoxes() {
    
@@ -29,8 +22,9 @@ function onCreateBoxes() {
         const divEl = document.createElement('div');
 
         divEl.style.width = 30 + i*10 + 'px';
-        divEl.style.height = 30 +  i*10 + 'px';
-        divEl.style.marginBottom = 10 + "px";
+        divEl.style.height = 30 + i * 10 + 'px';
+        divEl.style.marginTop = 5 + "px";
+        divEl.style.marginBottom = 5 + "px";
         divEl.style.backgroundColor = randomBackgroundColor();
         array.push(divEl);
         console.log(divEl);
