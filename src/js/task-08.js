@@ -4,49 +4,49 @@ const refs = {
     clearBtn: document.querySelector('button[data-action="destroy"]'),
     boxes:document.querySelector('#boxes'),
 }
+
 refs.input.addEventListener('input', onInputNumber);
-refs.createBtn.addEventListeneer('click', onCreateBoxes)
-refs.clearBtn.addEventListeneer('click', onClearBoxes)
+refs.createBtn.addEventListener('click', onCreateBoxes);
+refs.clearBtn.addEventListener('click', onClearBoxes);
 
-for (i = 1 to i = 8) {
-    fff
-}
 
-const amount = 0;
+
 function onInputNumber(event) {
     
-    amount = event.currentTarget.value;
+   amount = Number(event.currentTarget.value);
+    
+   
+    
 }
+let amount = 0;
 
-function onCreateBoxes(amount) {
-    //  for (i = 1 to i = amount) {
-    //const divEl = document.createElement('div');
-    
-    //divEl.width = 30;
-    //divEl.height = 30;
-    // divEl.style.backgroundColor = 20;
-    
-  
-    //return divEl;
-//}
-  //})
-    //refs.boxes.append(...elements); 
+
+function onCreateBoxes() {
+   
+    const array = [];
+   
+    for (let i = 0; i < 4; i += 1) {
+        const divEl = document.createElement('div');
+
+        divEl.style.width = 30 + i*10 + 'px';
+        divEl.style.height = 30 +  i*10 + 'px';
+        divEl.style.marginBottom = 10 + "px";
+        divEl.style.backgroundColor = randomBackgroundColor();
+        array.push(divEl);
+        console.log(divEl);
+    }
+    console.log(array);
+    refs.boxes.append(...array); 
 }
 
 function onClearBoxes() {
-    
+    refs.boxes.innerHTML = '';
 }
 
-//const makeGallery = images => {
-  //return images.map((image) => {
-    //const divEl = document.createElement('div');
-    
-    //divEl.width = 30;
-    //divEl.height = 30;
-   // divEl.style.backgroundColor = 20;
-    
-  
-    //return divEl;
-  //})
-//}
-//refs.boxes.append(...elements); 
+function randomBackgroundColor() {
+    let r = Math.floor(Math.random() * (256));
+    let g = Math.floor(Math.random() * (256));
+    let b = Math.floor(Math.random() * (256));
+   
+    return "rgb(" + r + "," + g +"," + b +")";
+}
