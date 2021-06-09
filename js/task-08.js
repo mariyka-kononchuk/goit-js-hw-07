@@ -44,4 +44,5 @@ function randomBackgroundColor() {
 
 function onClearBoxes() {
     refs.boxes.innerHTML = '';
+    refs.input.value = '';
 }
