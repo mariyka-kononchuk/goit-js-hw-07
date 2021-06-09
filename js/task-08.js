@@ -3,7 +3,6 @@ const refs = {
     createBtn:document.querySelector('button[data-action="render"]'),
     clearBtn: document.querySelector('button[data-action="destroy"]'),
     boxes: document.querySelector('#boxes'),
-    
 }
 
 refs.input.addEventListener('input', onInputNumber);

@@ -14,7 +14,6 @@ const images = [
 ];
 
 //1-й вариант
-
 const makeGalleryListMarkup = images => {
   const { url, alt } = images;
   return `<li class = "gallery-item"><img src=${url} alt=${alt} class='gallery-img' width=360></li>`;
